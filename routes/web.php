@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\PostsController;
+use \App\Http\Controllers\LocationController;
 use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\PagesController::class, 'index']);
 
@@ -24,3 +25,13 @@ Route::get('/services', [\App\Http\Controllers\PagesController::class, 'services
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//locations
+Route::group(['prefix' => 'locations'], function () {
+    Route::get('/', [LocationController::class, 'index'])->name('locations.index');
+    Route::get('/create', [LocationController::class, 'create'])->name('locations.create');
+    Route::post('/', [LocationController::class, 'store'])->name('locations.store');
+    Route::get('edit/{id}', [LocationController::class, 'edit'])->name('locations.edit');
+    Route::put('update/{id}', [LocationController::class, 'update'])->name('locations.update');
+    Route::delete('/delete/{id}', [LocationController::class, 'delete'])->name('locations.delete');
+});
