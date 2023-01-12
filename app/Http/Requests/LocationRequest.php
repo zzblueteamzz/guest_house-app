@@ -13,7 +13,7 @@ class LocationRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class LocationRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'=>'required'
         ];
+    }
+    public function messages(){
+        $rules =  [ 'name.required' => 'Location name is required'];
+        return $rules;
     }
 }
