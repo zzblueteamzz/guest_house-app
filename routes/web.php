@@ -2,6 +2,7 @@
 use App\Http\Controllers\PostsController;
 use \App\Http\Controllers\LocationController;
 use \App\Http\Controllers\HouseTypeController;
+use \App\Http\Controllers\HouseController;
 use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\PagesController::class, 'index']);
 
@@ -44,4 +45,13 @@ Route::group(['prefix' => 'house_types'], function () {
     Route::get('edit/{id}', [HouseTypeController::class, 'edit'])->name('house_types.edit');
     Route::put('update/{id}', [HouseTypeController::class, 'update'])->name('house_types.update');
     Route::delete('/delete/{id}', [HouseTypeController::class, 'delete'])->name('house_types.delete');
+});
+//houses
+Route::group(['prefix' => 'houses'], function () {
+    Route::get('/', [HouseController::class, 'index'])->name('houses.index');
+    Route::get('/create', [HouseController::class, 'create'])->name('houses.create');
+    Route::post('/', [HouseController::class, 'store'])->name('houses.store');
+    Route::get('edit/{id}', [HouseController::class, 'edit'])->name('houses.edit');
+    Route::put('update/{id}', [HouseController::class, 'update'])->name('houses.update');
+    Route::delete('/delete/{id}', [HouseController::class, 'delete'])->name('houses.delete');
 });

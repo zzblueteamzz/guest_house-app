@@ -325,6 +325,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Houses',
+            'route'  => 'houses.index',
+            'icon' => 'fas fa-home',
+        ],
+        [
             'text' => 'Locations',
             'route'  => 'locations.index',
             'icon' => 'fas fa-map',

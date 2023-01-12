@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\LocationRequest;
+use App\Http\Requests\HouseTypeRequest;
 use App\Models\HouseType;
-use App\Models\Location;
 use Illuminate\Http\Request;
 
 class HouseTypeController extends Controller
