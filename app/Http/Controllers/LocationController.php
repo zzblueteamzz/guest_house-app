@@ -29,17 +29,17 @@ class LocationController extends Controller
     public function edit($id)
     {
         $location =  Location::find($id);
-        return view('locations.edit')->with(['category' => $location]);
+        return view('locations.edit')->with(['location' => $location]);
     }
 
-    public function update(CategoryRequest $request, $id)
+    public function update(LocationRequest $request, $id)
     {
         $data = $request->except('_method', '_token');
         $location =  Location::find($id);
         if ($location){
             $location->update($data);
         }
-        return redirect()->action([CategoryController::class, 'index']);
+        return redirect()->action([LocationController::class, 'index']);
     }
 
     public function delete($id){

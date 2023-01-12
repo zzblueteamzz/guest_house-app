@@ -327,7 +327,12 @@ return [
         [
             'text' => 'Locations',
             'route'  => 'locations.index',
-            'icon' => 'fas fa-home',
+            'icon' => 'fas fa-map',
+        ],
+        [
+            'text' => 'HouseTypes',
+            'route'  => 'house_types.index',
+            'icon' => 'fas fa-hotel',
         ],
         [
             'text' => 'change_password',
