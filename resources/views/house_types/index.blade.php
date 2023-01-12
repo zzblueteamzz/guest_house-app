@@ -22,9 +22,9 @@
                         <td>
                             <div class="d-flex">
                                 <div class="edit mx-2">
-                                    <a href="{{route('locations.edit',  $house_type->id)}}" class="btn btn-primary">{{__('Edit')}}</a>
+                                    <a href="{{route('house_types.edit',  $house_type->id)}}" class="btn btn-primary">{{__('Edit')}}</a>
                                 </div>
-                                <form  method="post" action="{{route('locations.delete',  $house_type->id)}}" class="d-inline">
+                                <form  method="post" action="{{route('house_types.delete',  $house_type->id)}}" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger"

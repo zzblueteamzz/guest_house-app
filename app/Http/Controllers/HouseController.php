@@ -22,7 +22,7 @@ class HouseController extends Controller
     public function store(HouseRequest $request)
     {
         $data = $request->except('_method', '_token');
-        Product::create($data);
+        House::create($data);
 
         return redirect(route('houses.index'));
     }

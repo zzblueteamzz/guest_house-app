@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class House extends Model
 {
     use HasFactory;
-    protected $fillable = ['house_types_id','location_id','name','beds_count','rooms_count'];
+    protected $fillable = ['house_type_id','location_id','name','beds_count','rooms_count'];
 
     public function house_type()
     {
