@@ -27,6 +27,24 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="row mb-3">
+                                <label for="description"
+                                       class="col-md-4 col-form-label text-md-end">{{__('Description')}}</label>
+
+                                <div class="col-md-6">
+                                    <input type="text"
+                                           name="description"
+                                           id="description"
+                                           class="form-control" @error('description') is-invalid @enderror
+                                           value="{{ old('description') ? old('description'): $location->description }}" required
+                                           autocomplete="description" autofocus>
+                                    @error('description')
+                                    <span class="text-danger" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
                             <div class="row mt-3 mb-2">
                                 <div class="col-md-6 offset-md-4">
 

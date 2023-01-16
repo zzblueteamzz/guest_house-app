@@ -20,9 +20,7 @@ Route::get('/services', [\App\Http\Controllers\PagesController::class, 'services
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', [HouseController::class, 'index_view'])->name('houses.index_view');
 
 Auth::routes();
 

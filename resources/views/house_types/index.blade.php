@@ -9,10 +9,11 @@
             </a>
         </div>
         <div class="row justify-content-center">
-            <table class="table table-dark">
+            <table class="table table-bordered">
                 <thead>
                 <th>{{__('ID')}}</th>
                 <th>{{__('Name')}}</th>
+                <th>{{__('Actions')}}</th>
                 </thead>
                 <tbody>
                 @foreach($house_types as $house_type)

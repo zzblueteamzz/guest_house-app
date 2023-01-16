@@ -13,7 +13,11 @@ class HouseController extends Controller
         $house = House::all();
         return view('houses.index')->with(['houses' => $house]);
     }
-
+    public function index_view()
+    {
+        $house = House::all();
+        return view('houses.index_view')->with(['houses' => $house]);
+    }
     public function create()
     {
         return view('houses.create');
@@ -21,6 +25,7 @@ class HouseController extends Controller
 
     public function store(HouseRequest $request)
     {
+        echo $request;
         $data = $request->except('_method', '_token');
         House::create($data);
 

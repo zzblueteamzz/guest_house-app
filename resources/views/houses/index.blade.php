@@ -9,7 +9,7 @@
             </a>
         </div>
         <div class="row justify-content-center">
-            <table class="table table-dark">
+            <table class="table table-bordered">
                 <thead>
                 <th>{{__('ID')}}</th>
                 <th>{{__('Name')}}</th>
@@ -26,8 +26,8 @@
                         <td>{{( $house->name)}}</td>
                         <td>{{( $house->house_type->name)}}</td>
                         <td>{{( $house->location->name)}}</td>
-                        <td>{{( $house->bed_count)}}</td>
-                        <td>{{( $house->room_count)}}</td>
+                        <td>{{( $house->beds_count)}}</td>
+                        <td>{{( $house->rooms_count)}}</td>
                         <td>
                             <div class="d-flex">
                                 <div class="edit mx-2">
